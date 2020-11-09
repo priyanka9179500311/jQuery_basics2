@@ -10,15 +10,13 @@
 	<body>
 
 		<div class="container">
-		  <form id="myForm">
+		  <form class="myForm">
+				
 				<div class="form-group">
-					<label for="n1">Enter No. 1:</label>
-					<input type="text" name="n1" class="form-control" placeholder="Enter n1" id="n1">
+					<label for="lname">Last name:</label>
+					<input type="text" name="lname" class="form-control" placeholder="Enter lname" id="lname">
 				</div>
-				<div class="form-group">
-					<label for="n2">Enter No. 2 :</label>
-					<input type="text" name="n2" class="form-control" placeholder="Enter n2" id="n2">
-				</div>
+				
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 
@@ -29,13 +27,10 @@
 		<script>
 			//(function)(jQuery);
 			(function(){
-				//alert('ok');
-				$('#myForm').submit(function(e){
+				//alert('jQuery loaded succesfully');
+				$('.myForm').submit(function(e){
 					e.preventDefault();
-					let n1 = parseFloat($("#n1").val());
-					let n2 = parseFloat($("#n2").val());
-					
-					alert("The sum is"+(n1+n2));
+					$(this).after('<input type="text" name="fname" class="fname">');
 				});
 			})(jQuery);
 			
